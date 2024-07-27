@@ -104,8 +104,7 @@ namespace EtlLib.Data
         {
             return GetEnumerator();
         }
-
-
+        
         public void Remove(string key)
         {
             if (IsFrozen)

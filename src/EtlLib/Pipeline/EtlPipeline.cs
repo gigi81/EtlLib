@@ -112,7 +112,6 @@ namespace EtlLib.Pipeline
                         var multiResult = new EtlOperationResult(true);
                         do
                         {
-                        
                             foreach (var op in loop.GetOperations())
                             {
                                 _executionResults[op] = LastResult = ExecuteOperation(op, context);
@@ -347,6 +346,5 @@ namespace EtlLib.Pipeline
             pipeline(p);
             return new DoWhileEtlOperationContext(this, p);
         }
-        
     }
 }

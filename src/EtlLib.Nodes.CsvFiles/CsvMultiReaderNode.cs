@@ -7,16 +7,18 @@ namespace EtlLib.Nodes.CsvFiles
 {
     public class CsvMultiReaderNode : AbstractProcessingNode<NodeOutputWithFilePath, Row>
     {
-        private bool _hasHeader;
-
-        public CsvMultiReaderNode()
-        {
-            _hasHeader = true;
-        }
+        private bool _hasHeader = true;
+        private CultureInfo _culture = CultureInfo.InvariantCulture;
 
         public CsvMultiReaderNode HasHeader(bool hasHeader = true)
         {
             _hasHeader = hasHeader;
+            return this;
+        }
+
+        public CsvMultiReaderNode WithCulture(CultureInfo culture)
+        {
+            _culture = culture;
             return this;
         }
 
@@ -25,8 +27,8 @@ namespace EtlLib.Nodes.CsvFiles
             foreach (var input in Input)
             {
                 using var stream = File.OpenText(input.FilePath);
-                using var reader = new CsvReader(stream, CultureInfo.InvariantCulture);
-                //TODO: reader.Configuration.BadDataFound = null;
+                using var reader = new CsvReader(stream, _culture);
+                
                 reader.Read();
                 if (_hasHeader)
                     reader.ReadHeader();
@@ -34,9 +36,7 @@ namespace EtlLib.Nodes.CsvFiles
                 while (reader.Read())
                 {
                     var row = context.ObjectPool.Borrow<Row>();
-                    var values = Enumerable.Range(0, reader.HeaderRecord.Length - 1).Select(i => reader.GetField<object>(i))
-                        .ToArray();
-                    row.Load(reader.HeaderRecord, values);
+                    row.Load(reader.HeaderRecord, reader.GetFields());
                     Emit(row);
                 }
             }

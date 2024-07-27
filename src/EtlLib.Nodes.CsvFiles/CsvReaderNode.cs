@@ -8,20 +8,21 @@ namespace EtlLib.Nodes.CsvFiles
     public class CsvReaderNode : AbstractSourceNode<Row>
     {
         private readonly bool _hasHeader;
+        private readonly CultureInfo _culture;
         private readonly string _filePath;
 
-        public CsvReaderNode(string filePath, bool hasHeaderRow = true)
+        public CsvReaderNode(string filePath, bool hasHeaderRow = true, CultureInfo culture = null)
         {
             _filePath = filePath;
             _hasHeader = hasHeaderRow;
+            _culture = culture ?? CultureInfo.InvariantCulture;
         }
 
         public override void OnExecute(EtlPipelineContext context)
         {
             using var stream = File.OpenText(_filePath);
-            using var reader = new CsvReader(stream, CultureInfo.InvariantCulture);
-
-            //TODO: reader.Configuration.BadDataFound = null;
+            using var reader = new CsvReader(stream, _culture);
+            
             reader.Read();
             if (_hasHeader)
                 reader.ReadHeader();
@@ -29,9 +30,7 @@ namespace EtlLib.Nodes.CsvFiles
             while (reader.Read())
             {
                 var row = context.ObjectPool.Borrow<Row>();
-                var values = Enumerable.Range(0, reader.HeaderRecord.Length - 1).Select(i => reader.GetField<object>(i))
-                    .ToArray();
-                row.Load(reader.HeaderRecord, values);
+                row.Load(reader.HeaderRecord, reader.GetFields());
                 Emit(row);
             }
 
