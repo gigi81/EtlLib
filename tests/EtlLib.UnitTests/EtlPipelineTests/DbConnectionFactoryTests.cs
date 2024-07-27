@@ -11,8 +11,8 @@ namespace EtlLib.UnitTests.EtlPipelineTests
         [Fact]
         public void Can_register_typed_connections()
         {
-            const string cs1 = "Data Source =:memory:; Version = 3; New = True;";
-            const string cs2 = "Data Source=:memory:;Version=3;New=False;";
+            const string cs1 = "Data Source =:memory:";
+            const string cs2 = "Data Source=:memory:";
             const string cs3 = "Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;";
 
             var registrar = new DbConnectionFactory();
@@ -49,7 +49,7 @@ namespace EtlLib.UnitTests.EtlPipelineTests
         [Fact]
         public void Can_register_and_resolve_via_pipeline_context()
         {
-            const string cs1 = "Data Source =:memory:; Version = 3; New = True;";
+            const string cs1 = "Data Source =:memory:";
 
             var context = new EtlPipelineContext();
 
