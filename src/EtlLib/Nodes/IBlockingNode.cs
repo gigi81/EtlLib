@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EtlLib.Nodes
+﻿namespace EtlLib.Nodes
 {
     public interface IBlockingNode
     {

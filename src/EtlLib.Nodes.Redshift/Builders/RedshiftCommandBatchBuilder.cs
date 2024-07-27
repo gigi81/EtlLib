@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EtlLib.Nodes.Redshift.Builders
+﻿namespace EtlLib.Nodes.Redshift.Builders
 {
     public class RedshiftCommandBatchBuilder
     {

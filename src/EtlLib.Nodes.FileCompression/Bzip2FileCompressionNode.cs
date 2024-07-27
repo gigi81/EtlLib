@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Pipeline;
 using ICSharpCode.SharpZipLib.BZip2;
 

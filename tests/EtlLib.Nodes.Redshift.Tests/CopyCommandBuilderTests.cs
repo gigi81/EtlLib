@@ -1,5 +1,4 @@
-﻿using EtlLib.Nodes.Redshift.Builders;
-using EtlLib.Nodes.Redshift.Builders.Copy;
+﻿using EtlLib.Nodes.Redshift.Builders.Copy;
 using FluentAssertions;
 using Xunit;
 

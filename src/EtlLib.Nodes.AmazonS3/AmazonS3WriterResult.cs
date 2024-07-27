@@ -1,5 +1,4 @@
-﻿using System;
-using Amazon.S3.Model;
+﻿using Amazon.S3.Model;
 using EtlLib.Data;
 
 namespace EtlLib.Nodes.AmazonS3

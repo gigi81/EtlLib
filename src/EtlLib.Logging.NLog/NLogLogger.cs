@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EtlLib.Logging.NLog
+﻿namespace EtlLib.Logging.NLog
 {
     public class NLogLogger : ILogger
     {

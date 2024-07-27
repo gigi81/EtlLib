@@ -1,5 +1,4 @@
-﻿using System;
-using EtlLib.Pipeline;
+﻿using EtlLib.Pipeline;
 using FluentAssertions;
 using Xunit;
 

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using Amazon.Runtime;
+﻿using Amazon.Runtime;
 using Amazon.S3;
-using EtlLib.Logging;
 using Amazon.S3.Transfer;
 using EtlLib.Pipeline;
 using EtlLib.Pipeline.Operations;

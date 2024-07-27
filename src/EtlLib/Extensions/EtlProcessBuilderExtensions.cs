@@ -1,5 +1,4 @@
-﻿using System;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Nodes.Impl;
 using EtlLib.Pipeline;
 using EtlLib.Pipeline.Builders;

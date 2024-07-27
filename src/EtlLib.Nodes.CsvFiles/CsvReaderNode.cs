@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using System.IO;
 using CsvHelper;
 using EtlLib.Data;
 using EtlLib.Pipeline;

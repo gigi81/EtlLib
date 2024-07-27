@@ -1,5 +1,4 @@
-﻿using System;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Pipeline.Builders;
 
 namespace EtlLib.Nodes.FileCompression

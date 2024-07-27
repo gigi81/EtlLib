@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EtlLib.Pipeline.Operations
+﻿namespace EtlLib.Pipeline.Operations
 {
     public interface IEtlOperationResult
     {

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Pipeline;
 using EtlLib.Pipeline.Builders;
 using EtlLib.Pipeline.Operations;

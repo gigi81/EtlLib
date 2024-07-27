@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using EtlLib.Pipeline;
+﻿using EtlLib.Pipeline;
 using EtlLib.Pipeline.Operations;
 
 namespace EtlLib

@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using EtlLib.Nodes;
+﻿using EtlLib.Nodes;
 
 namespace EtlLib.Support
 {

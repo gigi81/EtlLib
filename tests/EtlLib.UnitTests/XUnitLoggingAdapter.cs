@@ -1,5 +1,4 @@
-﻿using System;
-using EtlLib.Logging;
+﻿using EtlLib.Logging;
 using Xunit.Abstractions;
 
 namespace EtlLib.UnitTests

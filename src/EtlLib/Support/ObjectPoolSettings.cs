@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EtlLib.Support
+﻿namespace EtlLib.Support
 {
     public class ObjectPoolSettings
     {

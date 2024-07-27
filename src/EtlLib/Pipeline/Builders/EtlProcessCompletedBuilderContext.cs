@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Pipeline.Operations;
 
 namespace EtlLib.Pipeline.Builders

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EtlLib.Pipeline
+﻿namespace EtlLib.Pipeline
 {
     public interface IDoWhileEtlOperationContext
     {

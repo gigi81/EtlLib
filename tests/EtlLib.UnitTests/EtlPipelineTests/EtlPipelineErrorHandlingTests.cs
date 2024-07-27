@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Nodes.Impl;
 using Xunit;
 using FluentAssertions;

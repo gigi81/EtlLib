@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EtlLib.Nodes.Redshift.Builders
+﻿namespace EtlLib.Nodes.Redshift.Builders
 {
     public class RedshiftCommandBuilderException : Exception
     {

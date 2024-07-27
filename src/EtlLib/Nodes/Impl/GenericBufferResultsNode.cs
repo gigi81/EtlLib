@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Pipeline;
 
 namespace EtlLib.Nodes.Impl

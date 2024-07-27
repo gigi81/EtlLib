@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EtlLib.Nodes.Redshift.Builders.Copy
+﻿namespace EtlLib.Nodes.Redshift.Builders.Copy
 {
     public enum CopyFromS3SourceObjectType
     {

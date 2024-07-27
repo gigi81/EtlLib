@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EtlLib.Pipeline.Operations
+﻿namespace EtlLib.Pipeline.Operations
 {
     public class ConditionalEtlOperation : AbstractEtlOperationWithNoResult
     {

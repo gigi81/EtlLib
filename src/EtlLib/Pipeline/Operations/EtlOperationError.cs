@@ -1,5 +1,4 @@
-﻿using System;
-using EtlLib.Nodes;
+﻿using EtlLib.Nodes;
 
 namespace EtlLib.Pipeline.Operations
 {

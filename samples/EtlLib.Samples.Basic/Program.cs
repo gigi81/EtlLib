@@ -1,5 +1,4 @@
-﻿using System;
-using EtlLib.Logging.NLog;
+﻿using EtlLib.Logging.NLog;
 using EtlLib.Pipeline;
 
 namespace EtlLib.Samples.Basic

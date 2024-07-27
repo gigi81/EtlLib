@@ -1,6 +1,4 @@
-﻿using System;
-using System.Data.SQLite;
-using System.Linq;
+﻿using System.Data.SQLite;
 using AutoFixture.Xunit2;
 using EtlLib.Data;
 using EtlLib.Pipeline;

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 
 namespace EtlLib.Nodes
 {

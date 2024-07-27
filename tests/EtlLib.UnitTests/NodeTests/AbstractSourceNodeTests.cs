@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Pipeline;
 using FluentAssertions;
 using Xunit;

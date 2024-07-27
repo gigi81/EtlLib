@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using Dapper;
 using EtlLib.Pipeline;
 using EtlLib.Pipeline.Operations;

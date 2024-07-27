@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Amazon.Runtime;
+﻿using Amazon.Runtime;
 using Amazon.S3;
 using EtlLib.Pipeline;
 using EtlLib.Pipeline.Operations;

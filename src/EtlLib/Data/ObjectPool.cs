@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EtlLib.Data
+﻿namespace EtlLib.Data
 {
     public interface IObjectPool
     {

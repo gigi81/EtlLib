@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace EtlLib.Pipeline
+﻿namespace EtlLib.Pipeline
 {
     public interface IEtlPipelineConfig
     {

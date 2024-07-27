@@ -1,5 +1,4 @@
-﻿using System;
-using EtlLib.Data;
+﻿using EtlLib.Data;
 using EtlLib.Logging;
 using EtlLib.Nodes;
 using EtlLib.Nodes.Impl;

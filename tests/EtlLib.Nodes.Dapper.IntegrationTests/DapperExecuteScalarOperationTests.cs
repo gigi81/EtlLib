@@ -1,5 +1,4 @@
 ﻿using System.Data.SQLite;
-using AutoFixture.Xunit2;
 using Dapper;
 using DapperExtensions.Sql;
 using EtlLib.Pipeline;

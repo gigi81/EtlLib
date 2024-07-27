@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace EtlLib.Pipeline.Operations
+﻿namespace EtlLib.Pipeline.Operations
 {
     public class EnsureDirectoryExistsEtlOperation : AbstractEtlOperationWithNoResult
     {

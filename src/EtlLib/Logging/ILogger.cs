@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EtlLib.Logging
+﻿namespace EtlLib.Logging
 {
     public interface ILogger
     {
