@@ -1,18 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>EtlLib.Nodes.FileCompression</PackageId>
-    <PackageVersion>$(Version)</PackageVersion>
-    <Authors>Cyle Witruk</Authors>
     <Description>SharpZipLib integration nodes for EtlLib: A simple ETL framework for .NET.</Description>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>First release</PackageReleaseNotes>
-    <PackageProjectUrl>https://github.com/cylewitruk/EtlLib</PackageProjectUrl>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageTags>etl extract transform load</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Nerdbank.GitVersioning" PrivateAssets="all" />
     <PackageReference Include="SharpZipLib.NETStandard" />
   </ItemGroup>
   <ItemGroup>

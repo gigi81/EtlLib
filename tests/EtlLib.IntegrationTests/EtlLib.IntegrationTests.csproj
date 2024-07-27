@@ -1,18 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-  </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="AutoFixture.Xunit2" />
     <PackageReference Include="Dapper" />
     <PackageReference Include="DapperExtensions" />
-    <PackageReference Include="FluentAssertions" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
     <PackageReference Include="System.Data.SQLite.Core" />
-    <PackageReference Include="xunit" />
-    <PackageReference Include="xunit.runner.visualstudio" />
   </ItemGroup>
 
   <ItemGroup>

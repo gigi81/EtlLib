@@ -1,16 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AutoFixture.Xunit2" />
-    <PackageReference Include="FluentAssertions" />
-    <PackageReference Include="xunit" />
-    <PackageReference Include="xunit.runner.visualstudio" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\src\EtlLib.Nodes.Redshift\EtlLib.Nodes.Redshift.csproj" />
     <ProjectReference Include="..\..\src\EtlLib\EtlLib.csproj" />
