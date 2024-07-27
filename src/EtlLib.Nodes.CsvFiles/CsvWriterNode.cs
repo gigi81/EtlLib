@@ -69,10 +69,9 @@ namespace EtlLib.Nodes.CsvFiles
 
             using (var file = File.OpenWrite(_filePath))
             using (var sw = new StreamWriter(file, _encoding))
-            using (var writer = new CsvWriter(sw))
+            using (var writer = new CsvWriter(sw, _culture))
             {
-                writer.Configuration.QuoteAllFields = _quoteAllFields;
-                writer.Configuration.CultureInfo = _culture;
+                //TODO: writer.Configuration.QuoteAllFields = _quoteAllFields;
 
                 foreach (var row in Input)
                 {

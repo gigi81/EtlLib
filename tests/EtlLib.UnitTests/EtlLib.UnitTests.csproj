@@ -3,6 +3,7 @@
     <PackageReference Include="Moq" />
     <PackageReference Include="Dapper" />
     <PackageReference Include="DapperExtensions" />
+    <PackageReference Include="System.Data.SqlClient" />
     <PackageReference Include="System.Data.SQLite.Core" />
   </ItemGroup>
   <ItemGroup>
