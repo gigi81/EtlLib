@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="AutoFixture.Xunit2" Version="4.4.0" />
+    <PackageVersion Include="AWSSDK.Core" Version="3.3.25.2" />
+    <PackageVersion Include="AWSSDK.S3" Version="3.3.23.1" />
+    <PackageVersion Include="CsvHelper" Version="7.1.1" />
+    <PackageVersion Include="Dapper" Version="1.50.5" />
+    <PackageVersion Include="DapperExtensions" Version="1.6.3" />
+    <PackageVersion Include="FluentAssertions" Version="5.3.0" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="2.0.2" />
+    <PackageVersion Include="MongoDB.Driver" Version="2.6.1" />
+    <PackageVersion Include="Moq" Version="4.9.0" />
+    <PackageVersion Include="Nerdbank.GitVersioning" Version="2.1.23" />
+    <PackageVersion Include="NLog" Version="4.5.8" />
+    <PackageVersion Include="NLog.Config" Version="4.5.8" />
+    <PackageVersion Include="Npgsql" Version="3.2.7" />
+    <PackageVersion Include="SharpZipLib.NETStandard" Version="1.0.7" />
+    <PackageVersion Include="SSH.NET" Version="2016.1.0" />
+    <PackageVersion Include="System.Configuration.ConfigurationManager" Version="4.4.1" />
+    <PackageVersion Include="System.Data.SqlClient" Version="4.4.3" />
+    <PackageVersion Include="System.Data.SQLite.Core" Version="1.0.108" />
+    <PackageVersion Include="xunit" Version="2.3.1" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.3.1" />
+  </ItemGroup>
+</Project>
