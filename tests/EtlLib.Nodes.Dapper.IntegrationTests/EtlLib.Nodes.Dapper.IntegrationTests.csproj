@@ -3,7 +3,7 @@
   <ItemGroup>
     <PackageReference Include="Dapper" />
     <PackageReference Include="DapperExtensions" />
-    <PackageReference Include="System.Data.SQLite.Core" />
+    <PackageReference Include="System.Data.SQLite.Core" PrivateAssets="none" />
   </ItemGroup>
 
   <ItemGroup>
@@ -11,5 +11,4 @@
     <ProjectReference Include="..\..\src\EtlLib\EtlLib.csproj" />
     <ProjectReference Include="..\EtlLib.UnitTests\EtlLib.UnitTests.csproj" />
   </ItemGroup>
-
 </Project>
