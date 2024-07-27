@@ -1,8 +1,8 @@
-﻿using System.Data.SQLite;
-using Dapper;
+﻿using Dapper;
 using DapperExtensions.Sql;
 using EtlLib.Pipeline;
 using FluentAssertions;
+using Microsoft.Data.Sqlite;
 using Xunit;
 
 namespace EtlLib.Nodes.Dapper.IntegrationTests
@@ -14,7 +14,7 @@ namespace EtlLib.Nodes.Dapper.IntegrationTests
         {
             DapperExtensions.DapperExtensions.SqlDialect = new SqliteDialect();
 
-            using (var con = new SQLiteConnection("Data Source=:memory:;Version=3;New=True;"))
+            using (var con = new SqliteConnection("Data Source=:memory:;Version=3;New=True;"))
             {
                 con.Open();
                 con.Execute("create table TestTable(Id int, Timestamp datetime, Name varchar(50));");
@@ -28,7 +28,7 @@ namespace EtlLib.Nodes.Dapper.IntegrationTests
                 result.Result.Should().Be(0);
             }
 
-            using (var con = new SQLiteConnection("Data Source=:memory:;Version=3;New=True;"))
+            using (var con = new SqliteConnection("Data Source=:memory:;Version=3;New=True;"))
             {
                 con.Open();
                 con.Execute("create table TestTable(Id int, Timestamp datetime, Name varchar(50));");

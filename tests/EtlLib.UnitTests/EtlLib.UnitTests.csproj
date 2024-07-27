@@ -4,7 +4,7 @@
     <PackageReference Include="Dapper" />
     <PackageReference Include="DapperExtensions" />
     <PackageReference Include="System.Data.SqlClient" />
-    <PackageReference Include="System.Data.SQLite.Core" />
+    <PackageReference Include="Microsoft.Data.SQLite.Core" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\EtlLib\EtlLib.csproj" />

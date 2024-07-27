@@ -1,5 +1,4 @@
-﻿using System.Data.SQLite;
-using AutoFixture.Xunit2;
+﻿using AutoFixture.Xunit2;
 using EtlLib.Data;
 using EtlLib.Pipeline;
 using EtlLib.Pipeline.Builders;
@@ -9,6 +8,7 @@ using DapperExtensions.Mapper;
 using DapperExtensions.Sql;
 using EtlLib.UnitTests;
 using FluentAssertions;
+using Microsoft.Data.Sqlite;
 using Xunit;
 
 namespace EtlLib.Nodes.Dapper.IntegrationTests
@@ -21,7 +21,7 @@ namespace EtlLib.Nodes.Dapper.IntegrationTests
         {
             DapperExtensions.DapperExtensions.SqlDialect = new SqliteDialect();
 
-            using (var con = new SQLiteConnection("Data Source=:memory:;Version=3;New=True;"))
+            using (var con = new SqliteConnection("Data Source=:memory:;Version=3;New=True;"))
             {
                 con.Open();
                 con.Execute("create table TestTable(Id int, Timestamp datetime, Name varchar(50));");
@@ -49,7 +49,7 @@ namespace EtlLib.Nodes.Dapper.IntegrationTests
         {
             DapperExtensions.DapperExtensions.SqlDialect = new SqliteDialect();
 
-            using (var con = new SQLiteConnection("Data Source=:memory:;Version=3;New=True;"))
+            using (var con = new SqliteConnection("Data Source=:memory:;Version=3;New=True;"))
             {
                 con.Open();
                 con.Execute("create table TestTable(Id int, Timestamp datetime, Name varchar(50));");
@@ -74,7 +74,7 @@ namespace EtlLib.Nodes.Dapper.IntegrationTests
         [Fact]
         public void DapperReaderNode_raises_error_and_signals_end_with_bad_query()
         {
-            using (var con = new SQLiteConnection("Data Source=:memory:;Version=3;New=True;"))
+            using (var con = new SqliteConnection("Data Source=:memory:;Version=3;New=True;"))
             {
                 con.Open();
 

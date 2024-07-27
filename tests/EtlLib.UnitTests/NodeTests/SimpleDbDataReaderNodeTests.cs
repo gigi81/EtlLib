@@ -1,5 +1,4 @@
-﻿using System.Data.SQLite;
-using AutoFixture.Xunit2;
+﻿using AutoFixture.Xunit2;
 using Dapper;
 using DapperExtensions;
 using DapperExtensions.Mapper;
@@ -8,6 +7,7 @@ using EtlLib.Data;
 using EtlLib.Nodes.Impl;
 using EtlLib.Pipeline;
 using FluentAssertions;
+using Microsoft.Data.Sqlite;
 using Xunit;
 using Moq;
 
@@ -21,7 +21,7 @@ namespace EtlLib.UnitTests.NodeTests
         {
             DapperExtensions.DapperExtensions.SqlDialect = new SqliteDialect();
 
-            using (var con = new SQLiteConnection("Data Source=:memory:;Version=3;New=True;"))
+            using (var con = new SqliteConnection("Data Source=:memory:;Version=3;New=True;"))
             {
                 con.Open();
                 con.Execute("create table TestTable(Id int, Timestamp datetime, Name varchar(50));");
@@ -36,7 +36,7 @@ namespace EtlLib.UnitTests.NodeTests
 
                 // register the connection name
                 context.DbConnections
-                    .For<SQLiteConnection>(reg => reg
+                    .For<SqliteConnection>(reg => reg
                         .Register("DB.Test", "foo"));
                 
                 var emitter = new TestEmitter<Row>();
@@ -63,7 +63,7 @@ namespace EtlLib.UnitTests.NodeTests
         {
             DapperExtensions.DapperExtensions.SqlDialect = new SqliteDialect();
 
-            using (var con = new SQLiteConnection("Data Source=:memory:;Version=3;New=True;"))
+            using (var con = new SqliteConnection("Data Source=:memory:;Version=3;New=True;"))
             {
                 con.Open();
                 con.Execute("create table TestTable(Id int, Timestamp datetime, Name varchar(50));");
@@ -76,7 +76,7 @@ namespace EtlLib.UnitTests.NodeTests
 
                 // register the connection name
                 context.DbConnections
-                    .For<SQLiteConnection>(reg => reg
+                    .For<SqliteConnection>(reg => reg
                         .Register("DB.Test", "foo"));
 
 

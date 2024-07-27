@@ -4,7 +4,6 @@
     <PackageReference Include="Dapper" />
     <PackageReference Include="DapperExtensions" />
     <PackageReference Include="Microsoft.Data.Sqlite" />
-    <PackageReference Include="System.Data.SQLite.Core" PrivateAssets="none" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System.Data.SqlClient;
-using System.Data.SQLite;
 using EtlLib.Pipeline;
 using FluentAssertions;
+using Microsoft.Data.Sqlite;
 using Xunit;
 
 namespace EtlLib.UnitTests.EtlPipelineTests
@@ -18,7 +18,7 @@ namespace EtlLib.UnitTests.EtlPipelineTests
             var registrar = new DbConnectionFactory();
 
             ((IDbConnectionRegistrar) registrar)
-                .For<SQLiteConnection>(con => con
+                .For<SqliteConnection>(con => con
                     .Register("inmemory", cs1)
                     .Register("inmemory2", cs2))
                 .For<SqlConnection>(con => con
@@ -29,14 +29,14 @@ namespace EtlLib.UnitTests.EtlPipelineTests
 
             connection1.Should().NotBeNull();
             connection1.ConnectionString.Should().Be(cs1);
-            connection1.Should().BeOfType<SQLiteConnection>();
+            connection1.Should().BeOfType<SqliteConnection>();
 
             var connection2 = ((IDbConnectionFactory)registrar)
                 .CreateNamedConnection("inmemory2");
 
             connection2.Should().NotBeNull();
             connection2.ConnectionString.Should().Be(cs2);
-            connection2.Should().BeOfType<SQLiteConnection>();
+            connection2.Should().BeOfType<SqliteConnection>();
 
             var connection3 = ((IDbConnectionFactory)registrar)
                 .CreateNamedConnection("remotedb");
@@ -54,13 +54,13 @@ namespace EtlLib.UnitTests.EtlPipelineTests
             var context = new EtlPipelineContext();
 
             context.DbConnections
-                .For<SQLiteConnection>(con => con.Register("inmemory", cs1));
+                .For<SqliteConnection>(con => con.Register("inmemory", cs1));
 
             var connection1 = context.CreateNamedDbConnection("inmemory");
 
             connection1.Should().NotBeNull();
             connection1.ConnectionString.Should().Be(cs1);
-            connection1.Should().BeOfType<SQLiteConnection>();
+            connection1.Should().BeOfType<SqliteConnection>();
         }
     }
 }
